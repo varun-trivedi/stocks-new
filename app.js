@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const app = express();
 // const fetch = require('node-fetch');
 
-
+const port = process.env.PORT || 3000
 app.get('/search/:ticker', (req, res, next) => {
 
   ticker = req.params.ticker;
@@ -217,6 +217,6 @@ app.get('/chart/historical/:ticker', function(req, res, next) {
 
 
 
-app.listen(3000,()=>{
-    console.log("Server is up on port 3000");
+app.listen(port,()=>{
+    console.log("Server is up on port "+port);
 })
