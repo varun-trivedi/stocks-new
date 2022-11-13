@@ -215,7 +215,13 @@ app.get('/chart/historical/:ticker', function(req, res, next) {
 
 });
 
+app.get('', function(req, res,) {
 
+  res.send({
+    message : "hello"
+  })
+  // console.log("\nrequesting company price\n");
+});
 
 app.listen(port,()=>{
     console.log("Server is up on port "+port);
